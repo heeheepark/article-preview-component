@@ -30,7 +30,9 @@ main {
 
 .img-area {
   width: 450px;
-  overflow: hidden
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .content-area .img-area img {
@@ -72,6 +74,10 @@ main {
   width: 30px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.desktop-shareBtn {
+  position: relative;
 }
 
 .user-area button {
@@ -177,6 +183,7 @@ main {
     overflow: hidden;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
   }
   
   .content-area .img-area img {
@@ -190,7 +197,7 @@ main {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    padding: 50px 40px 30px;
+    padding: 50px 40px 20px;
   }
   
   .main-area h1 {
@@ -214,6 +221,9 @@ main {
     justify-content: space-between;
     align-items: center;
     padding-right: 10px;
+    position: relative;
+    box-sizing: border-box;
+    
   }
   
   .user-area > div {
@@ -226,29 +236,27 @@ main {
     border-radius: 50%;
     margin-right: 20px;
   }
+
+  .desktop-shareBtn {
+    position: static;
+  }
   
   .user-area button {
+    z-index: 10;
     border: none;
     border-radius: 50%;
     padding: 5px 7px;
     background-color: hsl(210, 46%, 95%);
     text-align: center; 
-    position: relative;
   }
   
   .user-area button:hover {
     cursor: pointer;
   }
-  
-  #shareBtn {
-    width: 30px;
-    height: 30px;
+
+  .shareIcon {
   }
-  
-  #shareBtn:hover {
-    fill: #fff;
-  }
-  
+
   .user-info {
     display: flex;
     flex-flow: column;
@@ -272,24 +280,27 @@ main {
   }
   
   .share-area {
-    width: 180px;
-    height: 40px;
+    box-sizing:border-box;
+    width: 123%;
+    height: 85px;
     background-color: hsl(217, 19%, 35%);
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 5px 20px;
-    border-radius: 7px;
+    justify-content: space-between;
+    padding: 0px 140px 5px 50px;
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     position: absolute;
-    top: -60px;
-    left: -78px;
+    top: -15px;
+    left: -40px;
   }
   
   .share-area::after {
-    border-top: 8px solid hsl(217, 19%, 35%);
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid transparent;
+    border-top: 0px solid hsl(217, 19%, 35%);
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
     content: "";
     position: absolute;
     top: 40px;
@@ -298,11 +309,11 @@ main {
   
   .share-area span {
     color: #fff;
-    font-size: 13px;
-    letter-spacing: 3px;
+    font-size: 15px;
+    letter-spacing: 8px;
   }
   
   .share-area img {
-    width: 15px;
+    width: 24px;
   }
 }

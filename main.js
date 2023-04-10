@@ -1,6 +1,5 @@
 let shareBtn = document.querySelector('button');
 
-
 shareBtn.addEventListener("mouseover", function() {
   shareBtn.style.backgroundColor = "hsl(217, 19%, 35%)"
   document.getElementById('shareBtn').style.fill = "#fff"
@@ -23,3 +22,6 @@ function inspector() {
     document.getElementsByClassName('share')[0].style.display = "none";
   }
 }
+
+
+
